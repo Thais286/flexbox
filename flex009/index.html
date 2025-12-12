@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container{
+            background-color: rgb(199, 129, 23);
+
+            display: flex;
+            flex-flow: row wrap;
+            padding: 10px;
+        }
+
+        div.item{
+            background-color: aqua;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px; /* aumenta o conteudo vc tbm pode por *px* por exemplo*/
+           
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- pai--><!-- só ele recebe display flex-->
+        <div class="item">A</div> <!--filhos-->
+        <div class="item">B tamanho grande</div>
+        <div class="item">C</div>
+        <div class="item">D tamanho gigantesco</div>
+        <div class="item">E</div>
+        <div class="item">F tamanho extraordinário</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>

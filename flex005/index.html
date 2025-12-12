@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox centralizado</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: chocolate;
+        }
+
+        main{
+            background-color: chartreuse;
+            height: 100vh;/* se deixar 90 vai mostras onde esta cada parte do código*/
+            
+            /* vh /Altura da tela inteira
+            Para controlar altura de seções baseadas na altura do dispositivo*/
+
+
+            width: 100vw; /* se deixar 90 vai mostras onde esta cada parte do código*/
+
+            /* vw / Largura da tela inteira
+            Para controlar largura ou tamanho de texto baseado na largura da tela*/
+
+            display: flex; /* torna ele o pai*/
+            flex-flow: row-reverse;
+            justify-content: center; /* vai ficar no centro em cima*/
+            align-items: center; /* o meio de cima vai para o centro do meio meio*/
+        }
+
+        section{
+            background-color: aqua;
+            height: 200px; 
+            width: 200px;
+
+            /* px / Tamanho fixo na tela / usado  ara elementos que precisam de tamanho exato, independente da tela
+            Botões pequenos, bordas, ícones, espaçamentos precisos */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Tela de Login</h1>
+        </section>
+    </main>
+</body>
+</html>

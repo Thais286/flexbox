@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container{
+            background-color: rgb(12, 58, 99);
+
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            height: 400px;
+            
+        }
+
+        div.item{
+            background-color: aqua;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+            
+
+            div#i2{
+               align-self: auto; /* vai herdar do pai ou seja padrão pode usar tbm inherit*/
+            }
+
+            div#i3{
+                align-self: flex-end; /* fica embaixo*/
+            }
+
+           
+
+            div#i5{
+                align-self: center; /* centraliza*/
+            }
+
+            div#i6{
+                align-self: flex-start;
+                
+            }
+
+            div#i7{
+                align-self: stretch; /* estica de em cima até embaixo*/
+            }
+            
+        
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- pai--><!-- só ele recebe display flex-->
+
+             <!--filhos-->
+     <!-- todos tem ordem 0 aparece primeiro o que foi colocado primeiro-->
+
+        <div class="item">A</div> 
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item" >D</div> 
+        <div class="item">E</div>
+        <div class="item">F</div> 
+        <div class="item">G</div>
+    </div>
+</body>
+</html>

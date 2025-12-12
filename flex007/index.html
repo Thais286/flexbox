@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container{
+            background-color: rgb(12, 58, 99);
+
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        div.item{
+            background-color: aqua;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- pai--><!-- só ele recebe display flex-->
+
+             <!--filhos-->
+     <!-- todos tem ordem 0 aparece primeiro o que foi colocado primeiro-->
+
+        <div class="item">A</div> 
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item"style="order: -3;" >D</div> <!-- isso faz ele aparecer em primeiro pq ele tem o menor valor ente 0,1 e -3 então o D fica em primeiro e os outros atras dele-->
+        <div class="item">E</div>
+        <div class="item"style="order: 1;">F</div> <!-- faz o F ficar em último por ser o maior valos o 1 entre 0 e -3 -->
+
+        <!--   
+                    ORDER
+        Os que não tem order tem valor 0 aparece na ordem que escreveu primeiro
+
+        menor valor / aparece primeiro
+        maior valor / aparece por último
+            -->
+        <div class="item">G</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container{
+            background-color: rgb(12, 58, 99);
+
+            display: flex;
+            flex-flow: row nowrap; /*já é o padrão nem precisa por*/
+        }
+
+        div.item{
+            background-color: aqua;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+
+            /* flex-basis Ele funciona como um width, mas específico para flexbox — e tem prioridade sobre width quando o container é display: flex.
+            */
+
+            flex-shrink: 1; 
+            
+            /* flex-shrink é a propriedade do Flexbox que controla quanto um item pode encolher quando não cabe espaço suficiente dentro do container.
+            
+            se ele for 0 não vai deixar encolher ,quando chegar no tamanho maximo o conteúdo começa a sumir
+            
+            slex-shrink:1 Todos encolhem na mesma proporção para caber no espaço.
+            
+            slex-shrink:2 Ele encolhe duas vezes mais que um item com shrink 1.*/
+
+            flex-grow: 1; 
+
+            /*         
+                    flex-grow
+            Se estiver em 0 não vai deixar aumentar o tamanho
+
+            flex-grow: 1, o espaço extra é dividido igualzinho entre eles.
+
+            flex-grow: 2 significa que aquele item vai crescer duas vezes mais do que um item que tenha flex-grow: 1.
+            */
+            
+            /* ---------------------------*/
+
+            /*     RESUMO
+
+            flex-basis = tamanho base
+
+            flex-grow = quanto ele cresce se sobrar espaço
+
+            flex-shrink = quanto ele encolhe se faltar espaço
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- pai--><!-- só ele recebe display flex-->
+        <div class="item">A</div> <!--filhos-->
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>

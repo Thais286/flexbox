@@ -10,6 +10,8 @@
 
             display: flex;
             flex-flow: row nowrap; 
+
+            /*flex-basis: 200px;*/
             
         }
 
@@ -18,29 +20,25 @@
             border: 1px solid black;
             text-align: center;
 
-            flex-basis: 200px;
             
-            /*flex-basis define qual será o tamanho inicial de cada item antes do container decidir se os itens vão crescer ou encolher.*/
         }
 
         div#cxA{
-            flex-shrink: 0;
+            /*flex-shrink: 0;
             flex-grow: 1;
+            flex-basis: 200px;*/
+
+            flex: 1 0 200px;
+
 
         }
 
-        div#cxB{
+        /* div#cxB{  para isso funcionar tem que usar o flex-basis lá emm cima
+
             flex-shrink: 1;
-            flex-grow: 4; /* quantidade de vezes que o quadrado selecionado vai crescer com relação aos demais*/
+            flex-grow: 4; /* quantidade de vezes que o quadrado selecionado vai crescer com relação aos demais
 
-        }
-
-        div#cxC{
-            flex-shrink: 5;/* quantidade de vezes que o quadrado selecionado vai diminuir com relação aos demais*/
-
-            flex-grow: 1;
-
-        }
+        }*/
 
     </style>
 </head>

@@ -21,6 +21,10 @@ header{
 
     display: flex;
     flex-flow: row wrap;
+    /* flex-flow / junta duas coisas direção dos itens quebra de linha
+    o row wrap é a quebra de linha parea a linha debaixo*/
+
+
     justify-content: space-between; /*spaço ENTRE os itens*/
     align-items: center;
 

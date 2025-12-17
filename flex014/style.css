@@ -13,7 +13,12 @@ body{
    
 }
 
-p, h1, h2{
+p{
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+h1, h2{
     margin-bottom: 10px;
     text-align: justify;
 }
@@ -33,11 +38,13 @@ section.flex-content{
 article.text-media{
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 article.media-text{
     display: flex;
-    flex-flow: row wrap-reverse;
+    flex-flow: row wrap-reverse; /* quando a tela diminuir a imagem troca de lugar com o texto*/
+    justify-content: space-between;
 }
 
 article> div.text{
@@ -47,7 +54,19 @@ article> div.text{
 }
 
 article > div.media{
-    flex: 1 0 500px;
+    flex: 1 0 400px;
 
     border: 2px dashed red;
+}
+
+div.media > img{
+    display: block;
+    margin: auto;
+    padding: 10px; /* da espaço na img*/
+}
+
+div.media > iframe{
+    display:block;
+    margin: auto;
+   width: 90%;
 }
